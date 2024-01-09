@@ -18,7 +18,6 @@ class Chair : Furniture
         Console.WriteLine($"Changed our chair from {color} to {newColor}");
         color = newColor;
         // base.ChangeColor(newColor);
-
     }
 
 

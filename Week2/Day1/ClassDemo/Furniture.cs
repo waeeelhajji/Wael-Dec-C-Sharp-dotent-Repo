@@ -1,4 +1,4 @@
-class Furniture
+abstract class Furniture
 {
     //! fields describe our object
     protected string color;
