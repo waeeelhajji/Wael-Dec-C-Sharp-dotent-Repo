@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "Hash": "aVAta9PfUR/udb0+IRfXGEatVVVKrAIyIAMyWuSjTxI=",
+  "Source": "FormsInTheWeb",
+  "BasePath": "_content/FormsInTheWeb",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "FormsInTheWeb\\wwwroot",
+      "Source": "FormsInTheWeb",
+      "ContentRoot": "C:\\Users\\waelh\\OneDrive\\Desktop\\Wael-Dec-C-Sharp-dotent-Repo\\Week3\\FormsInTheWeb\\wwwroot\\",
+      "BasePath": "_content/FormsInTheWeb",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\waelh\\OneDrive\\Desktop\\Wael-Dec-C-Sharp-dotent-Repo\\Week3\\FormsInTheWeb\\wwwroot\\css\\style.css",
+      "SourceId": "FormsInTheWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\waelh\\OneDrive\\Desktop\\Wael-Dec-C-Sharp-dotent-Repo\\Week3\\FormsInTheWeb\\wwwroot\\",
+      "BasePath": "_content/FormsInTheWeb",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\style.css"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css" />
+    <title>Forms</title>
+</head>
+
+<body>
+    <h1>Forms Lecture</h1>
+    <form action="process" method="post">
+        <label for="FavoriteAnimals"> Tell me your favorite Animal</label> <br />
+        <input type="text" name="FavoriteAnimal">
+        <span>
+            @{
+                if (ViewBag.Error == null)
+                {
+                    <p></p>
+                }
+                else
+                {
+                    <p>@ViewBag.Error</p>
+                    <img src="~/images/akc-pupill-hdr-new-new.png" alt="">
+                }
+            }
+
+        </span>
+        <input type="submit" value="Submit">
+
+    </form>
+
+
+
+
+</body>
+
+</html>
