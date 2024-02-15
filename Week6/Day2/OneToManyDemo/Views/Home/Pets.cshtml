@@ -1,0 +1,38 @@
+@model Pet
+
+<div class="text-center">
+    <form action="/pet/add" method="post">
+        <div class="from-group">
+            <label for="Name">Name</label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="from-group">
+            <label for="Species">Species</label>
+            <input asp-for="Species" class="form-control">
+            <span asp-validation-for="Species" class="text-danger"></span>
+        </div>
+        <div class="from-group">
+            <label for="OwnerId">Owner</label>
+            <select asp-for="OwnerId" class="form-control">
+                <option value=null>---Select---</option>
+                @foreach (var o in ViewBag.AllOwners)
+                {
+                    <option value="@o.OwnerId">@o.Name</option>
+                }
+            </select>
+        </div>
+        <div class="from-group">
+            <input type="submit" value="Add Pet" class="btn btn-danger">
+        </div>
+
+    </form>
+    <h2> All the pets</h2>
+    <ul>
+        @foreach (var a in ViewBag.AllPets)
+        {
+            <li>@a.Name , @a.Species is owned by : @a.Owner.Name</li>
+        }
+    </ul>
+
+</div>

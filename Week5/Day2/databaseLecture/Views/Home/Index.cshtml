@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Create Item";
+}
+@model Item
+<div class="text-center">
+    <h1 class="display-4">Create New Item</h1>
+    <form asp-action="CreateSong" asp-controller="Home" method="post">
+        <div class="mb-3">
+            <label asp-for="Name"> Name </label>
+            <input asp-for="Name" class="form-control">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Description"> Description</label>
+            <input asp-for="Description" class="form-control">
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <input type="submit" value="Add Item" class="btn btn-info">
+        </div>
+
+    </form>
+
+
+</div>

@@ -1,0 +1,24 @@
+@model List<Item>
+
+<h1>All Items</h1>
+<table class="table table-striped">
+    <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Actions</th>
+
+    </tr>
+    @foreach (Item i in Model)
+    {
+        <tr>
+            <td>@i.Name</td>
+            <td>@i.Description</td>
+            <td>
+                <form asp-action="DeleteSong" asp-controller="Home" asp-route-itemId="@i.ItemId" method="post">
+                    <input type="submit" value="Delete" class="btn btn-danger">
+                </form>
+                <a href="item/edit/@i.ItemId">Edit</a>
+            </td>
+        </tr>
+    }
+</table>

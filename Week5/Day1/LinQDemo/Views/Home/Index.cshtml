@@ -1,0 +1,88 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome To LinQ Lecture</h1>
+    <table class="table table-striped">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre</th>
+            <th>Rating</th>
+            <th>Platform</th>
+        </tr>
+        @foreach (Game g in ViewBag.AllPCGames)
+        {
+            <tr>
+                <td>@g.Title</td>
+                <td>@g.Price.ToString("C")</td>
+                <td>@g.Genre</td>
+                <td>@g.Rating</td>
+                <td>@g.Platform</td>
+            </tr>
+        }
+
+    </table>
+    <hr>
+    <h3>Omar loves @ViewBag.Overwatch.Title</h3>
+    <hr>
+    <hr>
+    <h2>Top 3 Free Games </h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre</th>
+            <th>Rating</th>
+            <th>Platform</th>
+        </tr>
+        @foreach (Game g in ViewBag.Top3Free)
+        {
+            <tr>
+                <td>@g.Title</td>
+                <td>@g.Price.ToString("C")</td>
+                <td>@g.Genre</td>
+                <td>@g.Rating</td>
+                <td>@g.Platform</td>
+            </tr>
+        }
+
+    </table>
+    <hr>
+    <hr>
+    <h3>the Most Expencive Game we have it is wuth the price : @ViewBag.MostExpensive</h3>
+    <hr>
+    <hr>
+    <h3>the Sum of All Games Tha I have : @ViewBag.Total</h3>
+    <hr>
+    <hr>
+    <h2> All the Titles of the games that I have</h2>
+    <table class="table table-striped">
+        <tr>
+            <th>Title</th>
+
+        </tr>
+        @foreach (string g in ViewBag.AllTitles)
+        {
+            <tr>
+                <td>@g</td>
+            </tr>
+        }
+
+    </table>
+    <hr>
+    <hr>
+
+    <h3>Do this Game exist or Not </h3>
+    @if (ViewBag.MatchTitle == true)
+    {
+        <h1>Yes we Have your Game</h1>
+    }
+    else
+    {
+        <h1>No Sorry this game is not availeble</h1>
+    }
+
+
+</div>

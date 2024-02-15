@@ -1,0 +1,29 @@
+<h1>Add Members to A Movie</h1>
+
+@model Cast
+<form action="/association/add" method="post">
+    <div class="form-group">
+        <label for="ActorId"> Actor: </label>
+        <select asp-for="ActorId" class="form-control">
+            @foreach (Actor a in ViewBag.AllActors)
+            {
+                <option value="@a.ActorId"> @a.Name @a.LastName</option>
+            }
+
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="MovieId"> Movie: </label>
+        <select asp-for="MovieId" class="form-control">
+            @foreach (Movie a in ViewBag.AllMovies)
+            {
+                <option value="@a.MovieId"> @a.Name</option>
+            }
+
+        </select>
+        <div class="form-group">
+            <input type="submit" value="Add Role" class="btn btn-primary">
+        </div>
+    </div>
+
+</form>
